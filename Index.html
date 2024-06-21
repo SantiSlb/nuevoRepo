@@ -5,16 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agenda Personal</title>
   <link rel="stylesheet" href="/css/estilo.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-  <nav>
-    <ul>
-        <li><a href="#">AGENDA</a></li>
-        <li><a href="#">LISTAS</a></li>
-        <li><a href="#">CALENDARIO</a></li>
-        <li><a href="#">ACERCA DE</a></li>
-        <li><a href="#">CONTACTO</a></li>
-    </ul>
-</nav>
+
+  <!-- Acá empieza la barra de navegación-->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="" alt=""><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"/>
+        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+      </svg></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Agenda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Calendario</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Listas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Recordatorio</a></li>
+              <li><a class="dropdown-item" href="#">Gastos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Historial</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <button class="btn btn-outline-success m-2" type="submit">Iniciar sesión</button>
+      </div>
+    </div>
+  </nav>
+
+  
+  <!-- Acá termina la barra de navegación-->
+   
+
+  <div class="container row mt-5">
+    <h1 class="text-center mb-4">Lista de Tareas</h1>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="container row m-2 width:2em">
+              <ul class="list-group">
+                <li class="list-group-item">Acá va un nuevo recordatorio/item</li>
+                <li class="list-group-item">Acá va un nuevo recordatorio/item</li>
+                <li class="list-group-item">Acá va un nuevo recordatorio/item</li>
+                <li class="list-group-item">Acá va un nuevo recordatorio/item</li>
+                <li class="list-group-item">Acá va un nuevo recordatorio/item</li>
+              </ul>
+            </div>
+            <form id="taskForm">
+                <div class="input-group mb-3">
+                    <input type="text" id="taskInput" class="form-control m-2" placeholder="Nueva tarea" aria-label="Nueva tarea">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary m-2" type="submit">Agregar</button>
+                    </div>
+                </div>
+            </form>
+            <ul class="list-group" id="taskList"></ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+
+
+<footer class="bg-light text-center text-lg-start mt-5">
+  <div class="container p-4">
+      <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Footer Content</h5>
+              <p>
+                  Aquí puedes colocar cualquier contenido que desees para el pie de página.
+              </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Enlaces</h5>
+              <ul class="list-unstyled mb-0">
+                  <li>
+                      <a href="#!" class="text-dark">Enlace 1</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">Enlace 2</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">Enlace 3</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">Enlace 4</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Enlaces</h5>
+              <ul class="list-unstyled mb-0">
+                  <li>
+                      <a href="#!" class="text-dark">Enlace 1</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">Enlace 2</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">Enlace 3</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">Enlace 4</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Derechos Reservados:
+      <a class="text-dark" href="https://tusitio.com/">TuSitio.com</a>
+  </div>
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
